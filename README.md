@@ -1,63 +1,72 @@
-# TypeScript React Tailwind Vite Template
+# WebMart - Marketplace Virtual Web 1
 
-This template provides a starting point for creating React projects with TypeScript, Tailwind CSS, and Vite.
+## Introdução
+Bem-vindo ao repositório do projeto WebMart, o ponto de encontro virtual para compradores e vendedores na disciplina Web 1. Neste projeto, nós implementamos um protótipo de marketplace que utiliza as mais modernas tecnologias da web para proporcionar uma experiência agradável e fluída para o usuário.
 
-## Overview
+### Características
+- Interface intuitiva para navegação entre produtos.
+- Funcionalidade de pesquisa para encontrar itens específicos com facilidade.
+- Sistema de carrinho de compras para gerenciar pedidos.
+- Simulação de checkout com formulário de finalização de compra.
+- Painel administrativo para gerência de produtos (CRUD).
 
-This template allows you to quickly set up a React project with TypeScript, Tailwind CSS, and Vite. It provides a modern development environment with features such as hot module replacement and fast refresh, making it easy to develop and customize your React applications.
+## Tecnologias Utilizadas
+- [Vite](https://vitejs.dev): Uma nova geração de ferramenta de front-end que proporciona um desenvolvimento mais rápido e performático.
+- [React](https://reactjs.org): Uma biblioteca JavaScript para construir interfaces de usuário.
+- HTML, CSS e JS: A trifeta clássica da web para estrutura, estilização e funcionalidades.
 
-## Features
+## Pré-requisitos
+Para rodar o WebMart na sua máquina local, você precisará ter o [Node.js](https://nodejs.org/en/) instalado (o npm será instalado juntamente com o Node.js).
 
-- TypeScript: Develop with confidence using static type-checking and improved tooling.
+## Instalação
 
-- React: Build dynamic user interfaces with the popular React library.
+Siga os passos abaixo para configurar o ambiente e executar o projeto:
 
-- Tailwind CSS: Easily style and customize your components using the utility-first approach of Tailwind CSS.
+1. **Clone o repositório**
 
-- Vite: Enjoy fast development and instant hot module replacement with Vite's lightning-fast dev server.
+   ```sh
+   git clone https://github.com/seuid/webmart.git
+   cd webmart
+   ```
 
-## Installation
+2. **Instale as dependências**
 
-To create a new project using this template, follow these steps:
+   Dentro do diretório do projeto, execute o seguinte comando para instalar as dependências necessárias:
 
-1. Ensure that you have Node.js installed on your machine.
-2. Open a terminal and navigate to the directory where you want to create your project.
-3. Run the following command to create a new project using the template:
+   ```sh
+   npm install
+   ```
+   
+   Ou, caso prefira usar o Yarn:
+   
+   ```sh
+   yarn install
+   ```
 
-```bash
-npx create-vite@latest --template typescript-react-tailwind-vite my-project
-```
+3. **Execute o projeto**
 
-Replace my-project with the desired name for your project.
+   Agora, com todas as dependências instaladas, você pode iniciar o servidor de desenvolvimento:
 
-4. Once the command completes, navigate into the project directory:
+   ```sh
+   npm run dev
+   ```
+   
+   Ou, se estiver usando Yarn:
+   
+   ```sh
+   yarn dev
+   ```
 
-```bash
-cd my-project
-```
+4. **Acesse o WebApp**
 
-5. Install the dependencies:
+   Abra o seu navegador e acesse o [http://localhost:3000](http://localhost:3000). Voilà! Você está agora no WebMart.
 
-```bash
-npm install
-```
+## Contribuição
 
-## Usage
+Para contribuir com o WebMart, por favor crie uma branch com o nome da sua feature (ex: `feature/carrinho-de-compras`), faça suas alterações e envie um Pull Request explicando as mudanças realizadas e sua importância para o projeto.
 
-To start the development server and run the project, use the following command:
+## Licença
 
-```bash
-npm run dev
-```
+Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
-This will start the development server and open your project in the browser. Any changes you make to the source code will be automatically reflected in the browser.
-
-## Building for Production
-
-To build the project for production, use the following command:
-
-```bash
-npm run build
-```
-
-This will create an optimized build of your project in the dist directory.
+---
