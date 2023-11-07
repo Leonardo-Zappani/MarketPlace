@@ -1,7 +1,7 @@
-# WebMart - Marketplace Virtual Web 1
+# E-conomize - Marketplace Virtual Web 1
 
 ## Introdução
-Bem-vindo ao repositório do projeto WebMart, o ponto de encontro virtual para compradores e vendedores na disciplina Web 1. Neste projeto, nós implementamos um protótipo de marketplace que utiliza as mais modernas tecnologias da web para proporcionar uma experiência agradável e fluída para o usuário.
+Bem-vindo ao repositório do projeto E-conomize, o ponto de encontro virtual para compradores e vendedores na disciplina Web 1. Neste projeto, nós implementamos um protótipo de marketplace que utiliza as mais modernas tecnologias da web para proporcionar uma experiência agradável e fluída para o usuário.
 
 ### Características
 - Interface intuitiva para navegação entre produtos.
@@ -59,11 +59,7 @@ Siga os passos abaixo para configurar o ambiente e executar o projeto:
 
 4. **Acesse o WebApp**
 
-   Abra o seu navegador e acesse o [http://localhost:3000](http://localhost:3000). Voilà! Você está agora no WebMart.
-
-## Contribuição
-
-Para contribuir com o WebMart, por favor crie uma branch com o nome da sua feature (ex: `feature/carrinho-de-compras`), faça suas alterações e envie um Pull Request explicando as mudanças realizadas e sua importância para o projeto.
+   Abra o seu navegador e acesse o [http://localhost:3000](http://localhost:3000). Voilà! Você está agora no E-conomize.
 
 ## Licença
 
