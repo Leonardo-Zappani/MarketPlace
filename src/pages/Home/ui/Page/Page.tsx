@@ -11,23 +11,51 @@ const Home: FC = () => {
     .then(json => setProdutos(json))
   }, []);
 
+  function calcularPrecoAposDesconto(valorOriginal: number, desconto: number) {
+    // Usa uma porcentagem aleatoria para calcular o valor original, baseado no desconto que foi aplicado
+    let finalPrice = valorOriginal * (1 + desconto / 100);
+  
+    return finalPrice.toFixed(2);
+  }
+
+  function gerarPorcentagemDeDescontoAleatorio() {
+    // Gera uma porcentagem aléatoria para multplicar o valor, gerndo assim um desconto falso aleatorio
+    return Math.floor(Math.random() * 100) + 1;
+  }
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mx-32 my-8">
-      {produtos.map((produto) => (
-        <div key={produto.id} className="rounded-lg shadow-2xl bg-base-300">
-          <img
-            src={produto.image}
-            className="w-full h-64 object-cover rounded-t-lg"
-            alt={produto.title}
-          />
-          <div className="p-4">
-            <h1 className="text-xl font-bold">{produto.title}</h1>
-            <button className="mt-2 w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-600">
-              Comprar
-            </button>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-32">
+      {produtos.map((produto) => {
+      const porcentagemDeDesconto = gerarPorcentagemDeDescontoAleatorio()
+      const precoMaisAlto = calcularPrecoAposDesconto(produto.price, porcentagemDeDesconto)
+      return (
+        <div key={produto.id} className="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
+          <a className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
+            <img className="object-cover" src={produto.image} alt={produto.title} />
+            <span className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">{porcentagemDeDesconto}% OFF</span>
+          </a>
+          <div className="mt-4 px-5 pb-5">
+            <a href="#">
+              <h5 className="text-xl tracking-tight text-slate-900">{produto.title}</h5>
+            </a>
+            <div className="mt-2 mb-5 flex items-center justify-between">
+              <p>
+                <span className="text-3xl font-bold text-slate-900">R${produto.price.toFixed(2)}</span>
+                <span className="text-sm text-slate-900 line-through">R${precoMaisAlto}</span>
+              </p>
+              <div className="flex items-center">
+                <span className="mr-2 ml-3 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">{produto.rating.rate}</span>
+              </div>
+            </div>
+            <a href="#" className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+              <svg xmlns="http://www.w3.org/2000/svg" className="mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+              Add to cart
+            </a>
           </div>
         </div>
-      ))}
+      )})}
     </div>
   );
 };
