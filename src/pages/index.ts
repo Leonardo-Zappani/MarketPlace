@@ -1,4 +1,4 @@
-import { Home } from "./Home";
+import { PaginaProdutos } from "./Home";
 import { NoMatch } from "./NoMatch";
 
-export { Home, NoMatch };
+export { PaginaProdutos, NoMatch };
