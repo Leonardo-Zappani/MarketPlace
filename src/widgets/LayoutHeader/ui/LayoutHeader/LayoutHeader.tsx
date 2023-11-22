@@ -1,6 +1,4 @@
 import { FC } from "react";
-import { Logo } from "@/widgets";
-import Menu from "../Menu/Menu";
 
 const LayoutHeader: FC = () => {
  

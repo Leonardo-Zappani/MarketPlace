@@ -1,5 +1,17 @@
 import { FC, useState, useEffect } from "react";
 
+type Produto = {
+  id: string
+  price: number
+  image: string
+  title: string
+  rating: {
+    rate: number
+    count: number
+  }
+}
+
+
 const Home: FC = () => {
   const [produtos, setProdutos] = useState([]);
 
@@ -25,7 +37,7 @@ const Home: FC = () => {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-32">
-      {produtos.map((produto) => {
+      {produtos.map((produto: Produto) => {
       const porcentagemDeDesconto = gerarPorcentagemDeDescontoAleatorio()
       const precoMaisAlto = calcularPrecoAposDesconto(produto.price, porcentagemDeDesconto)
       return (
