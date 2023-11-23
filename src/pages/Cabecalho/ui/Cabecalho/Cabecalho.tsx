@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../../../../app/Context/ContextoCarrinho.tsx";
 
-const Cabecalho: FC = () => {
+const Cabecalho = () => {
   const { cart } = useCart();
   const history = useNavigate();
 

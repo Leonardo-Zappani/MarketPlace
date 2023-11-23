@@ -28,7 +28,7 @@ const PaginaProdutos: FC = () => {
 
   function calcularPrecoAposDesconto(valorOriginal: number, desconto: number) {
     // Usa uma porcentagem aleatoria para calcular o valor original, baseado no desconto que foi aplicado
-    let finalPrice = valorOriginal * (1 + desconto / 100);
+    const finalPrice = valorOriginal * (1 + desconto / 100);
   
     return finalPrice.toFixed(2);
   }

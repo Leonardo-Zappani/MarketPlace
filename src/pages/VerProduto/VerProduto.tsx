@@ -9,7 +9,7 @@ const VerProdutoDetalhes: React.FC = () => {
         fetch('https://fakestoreapi.com/products/' + id)
             .then(res => res.json())
             .then(produto => setProduto(produto))
-    }, []);
+    }, [id]);
 
     if (!produto) {
         return <p>Produto não encontrado.</p>;
