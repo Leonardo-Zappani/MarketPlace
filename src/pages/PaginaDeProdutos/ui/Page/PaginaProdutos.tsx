@@ -22,7 +22,7 @@ const PaginaProdutos: FC = () => {
     // na tela principal.
     fetch('https://fakestoreapi.com/products')
     .then(res => res.json())
-    .then(json => setProdutos(json))
+    .then(produtos => setProdutos(produtos))
   }, []);
 
   function calcularPrecoAposDesconto(valorOriginal: number, desconto: number) {

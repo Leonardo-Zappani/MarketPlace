@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { useCart } from "../../../../app/Context/ContextoCarrinho.tsx";
 
-const LayoutHeader: FC = () => {
+const Cabecalho: FC = () => {
   const { cart } = useCart();
 
   function calcularSubtotal(cartItems) {
@@ -13,7 +13,7 @@ const LayoutHeader: FC = () => {
       <>
         <div className="navbar bg-base-100">
           <div className="flex-1">
-            <a className="btn btn-ghost normal-case text-xl">E-conomize</a>
+            <a href="/" className="btn btn-ghost normal-case text-xl">E-conomize</a>
           </div>
           <div className="flex-none">
             <div className="dropdown dropdown-end">
@@ -30,14 +30,14 @@ const LayoutHeader: FC = () => {
                     {cart.map((item) => (
                         <div key={item.id} className="flex justify-between items-center mb-2">
                           <span>{item.title}</span>
-                          <span>R${item.price.toFixed(2)}</span>
+                          <span>R${item?.price?.toFixed(2)}</span>
                         </div>
                     ))}
                   </div>
                   <hr className="my-3" />
                   <span className="text-info">Subtotal: R${calcularSubtotal(cart)}</span>
                   <div className="card-actions">
-                    <button className="btn btn-primary btn-block">Ver carrinho :)</button>
+                    <a href="/carrinho" className="btn btn-primary btn-block">Ver carrinho :)</a>
                   </div>
                 </div>
               </div>
@@ -51,12 +51,11 @@ const LayoutHeader: FC = () => {
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               <li>
                 <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
+                  Manuel Gomes
                 </a>
               </li>
-              <li><a>Settings</a></li>
-              <li><a>Logout</a></li>
+              <li><a>Configurações</a></li>
+              <li><a>Deslogar</a></li>
             </ul>
           </div>
         </div>
@@ -65,4 +64,4 @@ const LayoutHeader: FC = () => {
   );
 };
 
-export default LayoutHeader;
+export default Cabecalho;

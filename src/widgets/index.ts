@@ -1,4 +1,4 @@
 import { LayoutFooter } from "../pages/./Rodape";
-import { LayoutHeader, Logo, Menu } from "../pages/./Cabecalho";
+import { Cabecalho, Logo, Menu } from "../pages/./Cabecalho";
 
-export { LayoutHeader, Logo, Menu, LayoutFooter };
+export { Cabecalho, Logo, Menu, LayoutFooter };

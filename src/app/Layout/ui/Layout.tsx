@@ -1,11 +1,11 @@
 import { FC } from "react";
-import { LayoutFooter, LayoutHeader } from "@/widgets";
+import { LayoutFooter, Cabecalho } from "@/widgets";
 import { Outlet } from "react-router-dom";
 
 const Layout: FC = () => {
   return (
     <div className="h-screen overflow-x-hidden">
-      <LayoutHeader />
+      <Cabecalho />
       <main>
         <Outlet />
       </main>
