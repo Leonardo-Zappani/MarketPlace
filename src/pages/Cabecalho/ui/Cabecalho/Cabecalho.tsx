@@ -15,11 +15,15 @@ const Cabecalho: FC = () => {
     history("/carrinho");
   }
 
+  function retornarHomePage(){
+    history('/')
+  }
+
   return (
       <>
         <div className="navbar bg-base-100">
           <div className="flex-1">
-            <a href="/" className="btn btn-ghost normal-case text-xl">E-conomize</a>
+            <button onClick={retornarHomePage} className="btn btn-ghost normal-case text-xl">E-conomize</button>
           </div>
           <div className="flex-none">
             <div className="dropdown dropdown-end">
