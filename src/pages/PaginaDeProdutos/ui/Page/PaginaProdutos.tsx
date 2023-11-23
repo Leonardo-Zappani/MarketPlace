@@ -12,7 +12,6 @@ type Produto = {
   }
 }
 
-
 const PaginaProdutos: FC = () => {
   const [produtos, setProdutos] = useState([]);
   const { addToCart } = useCart();

@@ -6,9 +6,7 @@ const Layout: FC = () => {
   return (
     <div className="h-screen overflow-x-hidden">
       <Cabecalho />
-      <main>
         <Outlet />
-      </main>
       <LayoutFooter />
     </div>
   );
