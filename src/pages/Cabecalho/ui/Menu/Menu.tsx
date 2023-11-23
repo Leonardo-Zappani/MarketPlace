@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Menu } from "../../model/types";
+import { Menu } from "../../model/types.ts";
 import { Link } from "react-router-dom";
 
 const Menu: FC<Menu> = ({ links }: Menu) => {

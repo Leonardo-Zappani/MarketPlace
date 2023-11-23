@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Logo } from "@/widgets/LayoutHeader/model/types";
+import { Logo } from "pages/Cabecalho/model/types.ts";
 
 const Logo: FC<Logo> = ({ logoName }: Logo) => {
   return (
