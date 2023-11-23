@@ -1,12 +1,18 @@
 import React, { FC } from "react";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../../../../app/Context/ContextoCarrinho.tsx";
 
 const Cabecalho: FC = () => {
   const { cart } = useCart();
+  const history = useNavigate();
 
   function calcularSubtotal(cartItems) {
     const subtotal = cartItems.reduce((acc, item) => acc + item.price, 0);
     return subtotal.toFixed(2);
+  }
+
+  function mostrarCarrinho() {
+    history("/carrinho");
   }
 
   return (
@@ -37,7 +43,7 @@ const Cabecalho: FC = () => {
                   <hr className="my-3" />
                   <span className="text-info">Subtotal: R${calcularSubtotal(cart)}</span>
                   <div className="card-actions">
-                    <a href="/carrinho" className="btn btn-primary btn-block">Ver carrinho :)</a>
+                    <button onClick={mostrarCarrinho} className="btn btn-primary btn-block">Ver carrinho :)</button>
                   </div>
                 </div>
               </div>

@@ -16,13 +16,13 @@ const PaginaProdutos: FC = () => {
   const [produtos, setProdutos] = useState([]);
   const { addToCart } = useCart();
 
-  useEffect(() => {
-    // Busca novos produtos dentro dessa API pública para listar 20 exemplos
-    // na tela principal.
-    fetch('https://fakestoreapi.com/products')
-    .then(res => res.json())
-    .then(produtos => setProdutos(produtos))
-  }, []);
+    useEffect(() => {
+      // Busca novos produtos dentro dessa API pública para listar 20 exemplos
+      // na tela principal.
+      fetch('https://fakestoreapi.com/products')
+      .then(res => res.json())
+      .then(produtos => setProdutos(produtos))
+    }, []);
 
   function calcularPrecoAposDesconto(valorOriginal: number, desconto: number) {
     // Usa uma porcentagem aleatoria para calcular o valor original, baseado no desconto que foi aplicado
@@ -44,11 +44,11 @@ const PaginaProdutos: FC = () => {
       return (
         <div key={produto.id} className="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
           <a className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
-            <img className="object-cover" src={produto.image} alt={produto.title} />
+            <img href={'/produto/' + produto.id} className="object-cover" src={produto.image} alt={produto.title} />
             <span className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">{porcentagemDeDesconto}% OFF</span>
           </a>
           <div className="mt-4 px-5 pb-5">
-            <a href="#">
+            <a href={'/produto/' + produto.id}>
               <h5 className="text-xl tracking-tight text-slate-900">{produto.title}</h5>
             </a>
             <div className="mt-2 mb-5 flex items-center justify-between">
