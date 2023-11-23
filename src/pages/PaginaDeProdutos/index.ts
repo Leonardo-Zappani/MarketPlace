@@ -1,3 +1,3 @@
-import PaginaProdutos from "./ui/Page/PaginaProdutos.tsx";
+import PaginaProdutos from "./ui/Page/PaginaProdutos.tsx"
 
-export { PaginaProdutos };
+export { PaginaProdutos }

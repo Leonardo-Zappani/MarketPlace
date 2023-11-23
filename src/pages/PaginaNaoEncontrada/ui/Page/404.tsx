@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { Link } from "react-router-dom";
+import { FC } from "react"
+import { Link } from "react-router-dom"
 
 const NoMatch: FC = () => {
   return (
@@ -14,7 +14,7 @@ const NoMatch: FC = () => {
         </Link>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default NoMatch;
+export default NoMatch

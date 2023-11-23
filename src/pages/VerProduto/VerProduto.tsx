@@ -1,18 +1,18 @@
-import React, {useEffect, useState} from "react";
-import { useParams } from "react-router-dom";
+import React, {useEffect, useState} from "react"
+import { useParams } from "react-router-dom"
 
 const VerProdutoDetalhes: React.FC = () => {
-    const { id } = useParams<{ id: string }>();
-    const [produto, setProduto] = useState(null);
+    const { id } = useParams<{ id: string }>()
+    const [produto, setProduto] = useState(null)
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products/' + id)
             .then(res => res.json())
             .then(produto => setProduto(produto))
-    }, [id]);
+    }, [id])
 
     if (!produto) {
-        return <p>Produto não encontrado.</p>;
+        return <p>Produto não encontrado.</p>
     }
 
     return (
@@ -32,7 +32,7 @@ const VerProdutoDetalhes: React.FC = () => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default VerProdutoDetalhes;
+export default VerProdutoDetalhes

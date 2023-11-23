@@ -1,12 +1,12 @@
-import React from "react";
-import { useCart } from "../../app/Context/ContextoCarrinho";
+import React from "react"
+import { useCart } from "../../app/Context/ContextoCarrinho"
 
 export const MostrarCarrinho: React.FC = () => {
-    const { cart } = useCart();
+    const { cart } = useCart()
 
     function calcularSubtotal() {
-        const subtotal = cart.reduce((acc, item) => acc + item.price, 0);
-        return subtotal.toFixed(2);
+        const subtotal = cart.reduce((acc, item) => acc + item.price, 0)
+        return subtotal.toFixed(2)
     }
 
     return (
@@ -32,5 +32,5 @@ export const MostrarCarrinho: React.FC = () => {
                 </>
             )}
         </div>
-    );
-};
+    )
+}

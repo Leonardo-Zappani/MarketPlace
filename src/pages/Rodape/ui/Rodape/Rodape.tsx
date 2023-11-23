@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from "react"
 
 const Rodape: FC = () => {
   return (
@@ -52,7 +52,7 @@ const Rodape: FC = () => {
         </div>
       </footer>
     </>
-  );
-};
+  )
+}
 
-export default Rodape;
+export default Rodape

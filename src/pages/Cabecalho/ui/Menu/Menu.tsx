@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { Menu } from "../../model/types.ts";
-import { Link } from "react-router-dom";
+import { FC } from "react"
+import { Menu } from "../../model/types.ts"
+import { Link } from "react-router-dom"
 
 const Menu: FC<Menu> = ({ links }: Menu) => {
   return (
@@ -36,7 +36,7 @@ const Menu: FC<Menu> = ({ links }: Menu) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Menu;
+export default Menu

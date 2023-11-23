@@ -1,3 +1,3 @@
-import Rodape from "./ui/./Rodape/Rodape.tsx";
+import Rodape from "./ui/./Rodape/Rodape.tsx"
 
-export { Rodape };
+export { Rodape }

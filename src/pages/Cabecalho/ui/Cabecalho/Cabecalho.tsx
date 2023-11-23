@@ -1,18 +1,18 @@
-import React, { FC } from "react";
-import { useNavigate } from "react-router-dom";
-import { useCart } from "../../../../app/Context/ContextoCarrinho.tsx";
+import React, { FC } from "react"
+import { useNavigate } from "react-router-dom"
+import { useCart } from "../../../../app/Context/ContextoCarrinho.tsx"
 
 const Cabecalho = () => {
-  const { cart } = useCart();
-  const history = useNavigate();
+  const { cart } = useCart()
+  const history = useNavigate()
 
   function calcularSubtotal(cartItems) {
-    const subtotal = cartItems.reduce((acc, item) => acc + item.price, 0);
-    return subtotal.toFixed(2);
+    const subtotal = cartItems.reduce((acc, item) => acc + item.price, 0)
+    return subtotal.toFixed(2)
   }
 
   function mostrarCarrinho() {
-    history("/carrinho");
+    history("/carrinho")
   }
 
   function retornarHomePage(){
@@ -71,7 +71,7 @@ const Cabecalho = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Cabecalho;
+export default Cabecalho

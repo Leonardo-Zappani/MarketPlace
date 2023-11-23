@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { Rodape, Cabecalho } from "@/widgets";
-import { Outlet } from "react-router-dom";
+import { FC } from "react"
+import { Rodape, Cabecalho } from "@/widgets"
+import { Outlet } from "react-router-dom"
 
 const Layout: FC = () => {
   return (
@@ -9,7 +9,7 @@ const Layout: FC = () => {
         <Outlet />
       <Rodape />
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

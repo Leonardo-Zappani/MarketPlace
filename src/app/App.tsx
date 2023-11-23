@@ -1,9 +1,9 @@
-import { FC } from "react";
-import { Route, Routes } from "react-router-dom";
-import { Layout } from "@/app/Layout";
-import { PaginaProdutos, NoMatch } from "@/pages";
-import { MostrarCarrinho } from "@/pages/Carrinho/mostrarCarrinho.tsx";
-import VerProdutoDetalhes from "@/pages/VerProduto/VerProduto.tsx";
+import { FC } from "react"
+import { Route, Routes } from "react-router-dom"
+import { Layout } from "@/app/Layout"
+import { PaginaProdutos, NoMatch } from "@/pages"
+import { MostrarCarrinho } from "@/pages/Carrinho/mostrarCarrinho.tsx"
+import VerProdutoDetalhes from "@/pages/VerProduto/VerProduto.tsx"
 
 
 const App: FC = () => {
@@ -18,7 +18,7 @@ const App: FC = () => {
         </Route>
       </Routes>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App

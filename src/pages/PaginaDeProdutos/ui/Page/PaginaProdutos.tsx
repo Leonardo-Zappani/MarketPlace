@@ -1,6 +1,6 @@
-import { FC, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useCart } from "../../../../app/Context/ContextoCarrinho.tsx";
+import { FC, useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
+import { useCart } from "../../../../app/Context/ContextoCarrinho.tsx"
 
 type Produto = {
   id: string
@@ -14,9 +14,9 @@ type Produto = {
 }
 
 const PaginaProdutos: FC = () => {
-  const [produtos, setProdutos] = useState([]);
-  const navegar = useNavigate();
-  const { addToCart } = useCart();
+  const [produtos, setProdutos] = useState([])
+  const navegar = useNavigate()
+  const { addToCart } = useCart()
 
     useEffect(() => {
       // Busca novos produtos dentro dessa API pública para listar 20 exemplos
@@ -24,18 +24,18 @@ const PaginaProdutos: FC = () => {
       fetch('https://fakestoreapi.com/products')
       .then(res => res.json())
       .then(produtos => setProdutos(produtos))
-    }, []);
+    }, [])
 
   function calcularPrecoAposDesconto(valorOriginal: number, desconto: number) {
     // Usa uma porcentagem aleatoria para calcular o valor original, baseado no desconto que foi aplicado
-    const finalPrice = valorOriginal * (1 + desconto / 100);
+    const finalPrice = valorOriginal * (1 + desconto / 100)
   
-    return finalPrice.toFixed(2);
+    return finalPrice.toFixed(2)
   }
 
   function gerarPorcentagemDeDescontoAleatorio() {
     // Gera uma porcentagem aléatoria para multplicar o valor, gerndo assim um desconto falso aleatorio
-    return Math.floor(Math.random() * 100) + 1;
+    return Math.floor(Math.random() * 100) + 1
   }
 
   return (
@@ -72,7 +72,7 @@ const PaginaProdutos: FC = () => {
         </div>
       )})}
     </div>
-  );
-};
+  )
+}
 
-export default PaginaProdutos;
+export default PaginaProdutos

@@ -1,4 +1,4 @@
-import { PaginaProdutos } from "././PaginaDeProdutos";
-import { NoMatch } from "././PaginaNaoEncontrada";
+import { PaginaProdutos } from "././PaginaDeProdutos"
+import { NoMatch } from "././PaginaNaoEncontrada"
 
-export { PaginaProdutos, NoMatch };
+export { PaginaProdutos, NoMatch }
