@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { LayoutFooter, Cabecalho } from "@/widgets";
+import { Rodape, Cabecalho } from "@/widgets";
 import { Outlet } from "react-router-dom";
 
 const Layout: FC = () => {
@@ -7,7 +7,7 @@ const Layout: FC = () => {
     <div className="h-screen overflow-x-hidden">
       <Cabecalho />
         <Outlet />
-      <LayoutFooter />
+      <Rodape />
     </div>
   );
 };

@@ -1,3 +1,3 @@
-import LayoutFooter from "./ui/LayoutFooter/LayoutFooter.tsx";
+import Rodape from "./ui/./Rodape/Rodape.tsx";
 
-export { LayoutFooter };
+export { Rodape };

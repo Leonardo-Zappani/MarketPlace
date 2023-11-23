@@ -1,23 +1,17 @@
 import { FC } from "react";
 
-const LayoutFooter: FC = () => {
+const Rodape: FC = () => {
   return (
     <>
-      <footer className="footer bg-base-300 p-10 text-base-content">
+      <footer className="footer bg-base-300 p-10 text-base-content justify-between">
         <div>
-          <span className="footer-title">Services</span>
-          <a className="link-hover link">Branding</a>
-          <a className="link-hover link">Design</a>
-          <a className="link-hover link">Marketing</a>
-          <a className="link-hover link">Advertisement</a>
+          <span className="footer-title">Nossa Empresa</span>
+          <a className="link-hover link">Funcionários</a>
+          <a className="link-hover link">Lema</a>
+          <a className="link-hover link">Valores</a>
+          <a className="link-hover link">Trabalhe conosco :)</a>
         </div>
-        <div>
-          <span className="footer-title">Company</span>
-          <a className="link-hover link">About us</a>
-          <a className="link-hover link">Contact</a>
-          <a className="link-hover link">Jobs</a>
-          <a className="link-hover link">Press kit</a>
-        </div>
+        <span className="footer-title w-full mt-32">Desenvolvido por Leonardo Zappani ;)</span>
         <div>
           <span className="footer-title">Social</span>
           <div className="grid grid-flow-col gap-4">
@@ -61,4 +55,4 @@ const LayoutFooter: FC = () => {
   );
 };
 
-export default LayoutFooter;
+export default Rodape;
