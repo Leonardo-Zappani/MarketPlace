@@ -6,7 +6,7 @@ const Rodape: FC = () => {
       <footer className="footer bg-base-300 p-10 text-base-content justify-between">
         <div>
           <span className="footer-title">Nossa Empresa</span>
-          <a className="link-hover link">Funcionários</a>
+          <a className="link-hover link">FAQ</a>
           <a className="link-hover link">Lema</a>
           <a className="link-hover link">Valores</a>
           <a className="link-hover link">Trabalhe conosco :)</a>

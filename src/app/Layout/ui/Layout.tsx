@@ -1,5 +1,6 @@
 import { FC } from "react"
-import { Rodape, Cabecalho } from "@/widgets"
+import { Cabecalho } from '../../../pages/Cabecalho'
+import { Rodape } from '../../../pages/Rodape'
 import { Outlet } from "react-router-dom"
 
 const Layout: FC = () => {
