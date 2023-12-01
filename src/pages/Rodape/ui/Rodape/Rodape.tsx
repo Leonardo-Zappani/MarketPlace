@@ -1,12 +1,16 @@
 import { FC } from "react"
+import { useNavigate } from "react-router-dom"
 
 const Rodape: FC = () => {
+  const navigate = useNavigate()
   return (
     <>
       <footer className="footer bg-base-300 p-10 text-base-content justify-between">
         <div>
           <span className="footer-title">Nossa Empresa</span>
-          <a className="link-hover link">FAQ</a>
+          <div onClick={() => navigate('/faq')}>
+            <a className="link-hover link">FAQ</a>
+          </div>
           <a className="link-hover link">Lema</a>
           <a className="link-hover link">Valores</a>
           <a className="link-hover link">Trabalhe conosco :)</a>

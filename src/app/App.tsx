@@ -13,7 +13,7 @@ const App: FC = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />} />
+        <Route path="/" element={<Layout />} >
           <Route index element={<PaginaProdutos />} />
           <Route path="*" element={<NoMatch />} />
           <Route path="/carrinho" element={<MostrarCarrinho />} />
@@ -21,6 +21,7 @@ const App: FC = () => {
           <Route path="/registrar" element={<Registrar />} />
           <Route path="/produto/:id" element={<VerProdutoDetalhes />} />
           <Route path="/faq" element={<Faq />} />
+        </Route>  
       </Routes>
     </>
   )
