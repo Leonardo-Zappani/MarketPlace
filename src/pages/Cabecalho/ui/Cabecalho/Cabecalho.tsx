@@ -76,7 +76,7 @@ const Cabecalho = () => {
                   <hr className="my-3" />
                   <span className="text-info">Subtotal: R${calcularSubtotal(cart)}</span>
                   <div className="card-actions">
-                    <button onClick={mostrarCarrinho} className="btn btn-primary btn-block">Ver carrinho</button>
+                    <button onClick={mostrarCarrinho} className="btn btn-primary btn-block bg-gradient-to-r from-purple-600 to-blue-600">Ver carrinho</button>
                   </div>
                 </div>
               </div>
